@@ -1,6 +1,7 @@
 #include <array>
 #include <cassert>
 #include <cstdint>
+#include <cstring>
 #include <iostream>
 #include <netdb.h>
 #include <netinet/in.h>
@@ -46,7 +47,7 @@ int main() {
 
     std::string ack = "ACK";
     std::array<char, 3> buf;
-    if (recv(connection, buf.data(), buf.size(), MSG_WAITALL) != buf.size()) {
+    if (recv(connection, buf.data(), buf.size(), MSG_WAITALL) != (int) buf.size()) {
         std::cerr << "Error receving ACK\n";
         return 1;
     }
