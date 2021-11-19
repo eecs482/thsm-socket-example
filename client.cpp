@@ -1,4 +1,7 @@
+#include <array>
+#include <cassert>
 #include <cstdint>
+#include <iostream>
 #include <netdb.h>
 #include <netinet/in.h>
 #include <string>
@@ -15,6 +18,9 @@ int main() {
     uint16_t server_port = 12345;
 
     // TODO: Send data_to_send to the server.
+
+    std::string ack = "ACK";
+    // TODO: Receive ACK
 
     return 0;
 }

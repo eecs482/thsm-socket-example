@@ -17,5 +17,8 @@ int main() {
     
     // TODO: Receive data from the client and print it.
 
+    std::string ack = "ACK";
+    // TODO: Send ACK
+
     return 0;
 }
